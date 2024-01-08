@@ -14,17 +14,17 @@ public class MyServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 
-		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
 
-		// send HTML page to client
-		out.println("<html>");
-		out.println("<head><title>Ejemplo HTML desde Servlet</title></head>");
-		out.println("<body>");
-		out.println("<h1>Ejemplo Servlet</h1>");
-		out.println("<p>Este es un ejemplo en el curso de Java para generar HTML desde un Servlet.</p>");
-		out.println("<p><a href=\"/myServlet2\">Vamos al otro Servlet</a></p>");
+		response.setContentType("text/html");
+		response.setContentType("text/html");
+		out.println("<html><body>");
+		out.println("<form action='myServlet2' method='post'>");
+		out.println("Nombre de usuario: <input type='text' name='username'><br>");
+		out.println("<input type='submit' value='Enviar'>");
+		out.println("</form>");
 		out.println("</body></html>");
+
 	}
 
 }

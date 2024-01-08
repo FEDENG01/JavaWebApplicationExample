@@ -11,17 +11,17 @@ import java.io.PrintWriter;
 @WebServlet(urlPatterns = "/myServlet2")
 public class MyServlet2 extends HttpServlet {
 
-	protected void doGet(HttpServletRequest request,
+	protected void doPost(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 
-		response.setContentType("text/html");
+		String username = request.getParameter("username");
 		PrintWriter out = response.getWriter();
 
-		// send HTML page to client
-		out.println("<html>");
-		out.println("<head><title>Ejemplo HTML desde Servlet</title></head>");
-		out.println("<body>");
-		out.println("<h1>Bienvenido!!</h1>");
+		response.setContentType("text/html");
+		out.println("<html><body>");
+		out.println("Hola, " + username + "!");
+		out.println("</body></html>");
+
 	}
 
 }
