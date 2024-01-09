@@ -22,6 +22,7 @@ public class MyServlet2 extends HttpServlet {
 		out.println("Hola, " + username + "!");
 		out.println("</body></html>");
 
+
 	}
 
 }
