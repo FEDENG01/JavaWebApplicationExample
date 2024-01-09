@@ -17,6 +17,7 @@ public class MyServlet extends HttpServlet {
 		// Redirige a la página JSP que solicitará el nombre del usuario
 		response.sendRedirect("formulario.jsp");
 
+
 	}
 
 }
