@@ -14,16 +14,8 @@ public class MyServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 
-		PrintWriter out = response.getWriter();
-
-		response.setContentType("text/html");
-		response.setContentType("text/html");
-		out.println("<html><body>");
-		out.println("<form action='myServlet2' method='post'>");
-		out.println("Nombre de usuario: <input type='text' name='username'><br>");
-		out.println("<input type='submit' value='Enviar'>");
-		out.println("</form>");
-		out.println("</body></html>");
+		// Redirige a la página JSP que solicitará el nombre del usuario
+		response.sendRedirect("formulario.jsp");
 
 	}
 
